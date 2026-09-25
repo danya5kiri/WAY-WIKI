@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="WAY WIKI — поисковый портал по ЭТРН и ГИС ЭПД">
+  <title>WAY WIKI — ЭТРН и ГИС ЭПД</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="top">
+    <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="WAY WIKI — на главную"><span class="brand-mark">W</span><span class="brand-name">WAY <b>WIKI</b></span></a>
+      <nav class="top-nav" id="top-nav" aria-label="Основная навигация"><a href="#search">Поиск</a><a href="#categories">Разделы</a><a href="#about">О портале</a></nav>
+      <button class="menu-button" id="menu-button" aria-label="Открыть меню">☰</button>
+    </header>
+
+    <section class="search-shell">
+      <div class="eyebrow">✦ ЭТРН · ГИС ЭПД</div>
+      <h1>Найдите точный ответ<br>по электронным перевозочным документам</h1>
+      <p class="lead">Проверенные инструкции, разъяснения и нормативные источники в одном поиске.</p>
+      <div class="search-box" id="search">
+        <span class="search-icon">⌕</span>
+        <input id="query" autocomplete="off" placeholder="Введите вопрос, термин или название документа" aria-label="Поиск по базе WAY WIKI">
+        <button class="clear-button" id="clear-query" aria-label="Очистить поиск">×</button>
+        <span class="shortcut">⌘ K</span>
+      </div>
+      <div class="category-row" id="categories" aria-label="Разделы базы знаний"></div>
+    </section>
+
+    <section class="results-section" aria-live="polite">
+      <div class="results-heading"><div><span class="section-label" id="result-label">Рекомендуемые материалы</span><h2 id="result-title">С чего начать</h2></div><span class="verified">✓ Актуальная база</span></div>
+      <div class="result-grid" id="results"></div>
+    </section>
+
+    <section class="about-strip" id="about">
+      <div><span class="about-icon">▤</span><span><b>Единая база</b>Инструкции и ответы собраны по темам</span></div>
+      <div><span class="about-icon">▧</span><span><b>Первоисточники</b>Ссылки на документы и материалы</span></div>
+      <div><span class="about-icon">✓</span><span><b>Контроль актуальности</b>Дата проверки указана в каждой карточке</span></div>
+    </section>
+    <footer><span>© 2026 WAY WIKI</span><span>ЭТРН и ГИС ЭПД</span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="modal" hidden>
+    <article class="detail-panel" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <button class="modal-close" id="modal-close" aria-label="Закрыть">×</button>
+      <span class="detail-section" id="detail-section"></span>
+      <h2 id="detail-title"></h2>
+      <p class="detail-lead" id="detail-lead"></p>
+      <div class="detail-body" id="detail-body"></div>
+      <div class="detail-meta"><span id="detail-date"></span><a id="detail-source" target="_blank" rel="noreferrer">Открыть источник ↗</a></div>
+    </article>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
